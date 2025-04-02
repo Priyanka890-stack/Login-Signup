@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Toggle between Login/Signup -->
+    <div class="form-toggle">
+      <button id="login-toggle" class="active">Login</button>
+      <button id="signup-toggle">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="form">
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="login-email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <i class="fas fa-eye toggle-password"></i>
+      </div>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <!-- Signup Form (Hidden Initially) -->
+    <form id="signup-form" class="form hidden">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="signup-name" placeholder="Full Name" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="signup-email" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <i class="fas fa-eye toggle-password"></i>
+      </div>
+      <div class="password-strength">
+        <span>Strength: </span>
+        <span id="strength-meter">Weak</span>
+        <div class="strength-bar"></div>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+
+    <!-- Social Login -->
+    <div class="social-login">
+      <p>Or continue with</p>
+      <div class="social-icons">
+        <button class="social-btn google"><i class="fab fa-google"></i></button>
+        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+      </div>
+    </div>
+  </div>        
+  <script src="script.js"></script>
+</body>
+</html>
